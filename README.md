@@ -35,7 +35,7 @@ After this, models were fit for several algorithms.
 
 The best performing model in terms of weighted f1 score was a Gradient Boosted Classifier.
 
-
+![Alt text](https://github.com/tylerwatkins101/Predict_Churn_with_PySpark/blob/master/Classification%20Report.jpg)
 
 ## Acknowledgements
 
