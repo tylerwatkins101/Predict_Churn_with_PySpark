@@ -11,7 +11,7 @@ The data analysis was done in two forms.
 ## File Descriptions
 
 - Sparkify.ipynb (Jupyter Notebook containing data analysis and modelling done locally on 120MB dataset)
-- mini_sparkify_event_data.json (Subset of full 12GB used for local analysis)
+- mini_sparkify_event_data.json (120 MB subset of full 12 GB used for local analysis)
 
 ## Dependencies
 
