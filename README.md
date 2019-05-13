@@ -1,12 +1,43 @@
 # Predict_Churn_with_PySpark
-Machine learning project to predict customer churn on 12GB of data using distributed computing with AWS and PySpark.
 
-Student must have a Github repository of their project. The repository must have a README.md file that communicates the libraries used, the motivation for the project, the files in the repository with a small description of each, a summary of the results of the analysis, and necessary acknowledgements. If the student submits a web app rather than a blog post, then the Project Definition, Analysis, and Conclusion should be included in the README file, or in their Jupyter Notebook. Students should not use another student's code to complete the project, but they may use other references on the web including StackOverflow and Kaggle to complete the project.
+## Project Motivation
 
-## Project Summary
+The motivation for this project is to show the capabilties of using PySpark for data exploration and machine learning and practice using simulated log data from the fictional company Sparkify to attempt to predict customer churn.
+
+The data analysis was done in two forms. 
+1. 12GB of data were analyzed using distributed computing with an AWS Elastic MapReduce Cluster, EMR Notebook and PySpark.
+2. A 120MB subset of the data was analyzed locally using PySpark, Pandas/Scikit-Learn, and a Jupyter Notebook.
 
 ## File Descriptions
 
-## Dependencies (How to Use)
+- Sparkify.ipynb (Jupyter Notebook containing data analysis and modelling done locally on 120MB dataset)
+- mini_sparkify_event_data.json (Subset of full 12GB used for local analysis)
+
+## Dependencies
+
+- pyspark
+- numpy
+- pandas
+- matplotlib
+- sklearn
+
+## Summary of Results
+
+After exploring the log data the 3 best features correlated to Churn were found to be: 
+
+- Avg pageviews for Thumbs Down (0.27) 
+- Avg pageviews for NextSong (-0.25)
+- Avg pageviews for Roll Advert (0.18) 
+
+This is not surprising. The higher percentage of time the user spends seeing advertisements or disliking music the more likely they are to cancel their service. The higher percentage of time the user spends listening to music the more likely they are to stay.
+
+After this, models were fit for several algorithms.
+
+The best performing model in terms of weighted f1 score was a Gradient Boosted Classifier.
+
+
 
 ## Acknowledgements
+
+- Udacity PySpark Course (part of Data Scientists Nanodegree)
+- stackoverflow.com
