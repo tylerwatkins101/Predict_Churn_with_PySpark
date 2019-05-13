@@ -31,7 +31,7 @@ After exploring the log data the 3 best features correlated to Churn were found 
 
 This is not surprising. The higher percentage of time the user spends seeing advertisements or disliking music the more likely they are to cancel their service. The higher percentage of time the user spends listening to music the more likely they are to stay.
 
-After this, models were fit for several algorithms.
+After this, 10 classification algorithms were compared using 5-fold cross validation.
 
 The best performing model in terms of weighted f1 score was a Gradient Boosted Classifier.
 
